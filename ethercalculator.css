@@ -1,6 +1,7 @@
 body {
   margin:0;
 }
+/* TOP SITE BAR */
 .navbar {
   overflow: hidden;
   background-color: #333;
@@ -30,32 +31,11 @@ body {
   text-decoration: none;
   font-size: 17px;
 }
-/* .navbar a:hover {
+ .navbar a:hover {
   background: #ddd;
   color: black;
-} */
-
-.column {
-  margin-top: 30px;
-  height: 500px;
-  color: black;
-  font-size: 12px;
 }
 
-.columns {
-
-}
-.section-title {
-  font-size: 19;
-  font-weight: bold;
-}
-body #main-container {
-  background: url("ethereum-hd.png") 50%;
-}
-#home {
-  position: sticky;
-  margin-top: 0px;
-}
 #page-title  {
   text-align: left;
   color: lightgray;
@@ -64,11 +44,67 @@ body #main-container {
   font-weight: bold;
   width: 50%
 }
+
+/* ETHEREUM PRICE CONTAINER */
+body #main-container {
+  background: url("ethereum-hd.png") width="100%";
+
+}
+.main {
+  padding: 0px;
+  margin-top: 0px;
+  height: 600px;
+  overflow: scroll;
+}
+.display{
+  background-color: white;
+  width: 100px;
+  margin-left: 30px;
+  border-color: white;
+  border-style: none;
+  font-size: 18px;
+  border-style: solid;
+  margin-left: 25px;
+  border-radius: 05px;
+  text-align: right;
+}
+
+input[type=number] {
+  border-color: white;
+  border-style: none;
+  font-size: 20px;
+  border-style: solid;
+  margin-left: 25px;
+  border-radius: 05px;
+  text-align: right;
+  width: 150px;
+}
+ #amount {
+  width: 100px;
+  margin-left: 30px;
+}
+#refresh {
+margin-left: 30px;
+}
+#quote-container {
+  font-size: 17px;
+  padding: 15px;
+  align-items: center;
+  justify-content: center;
+  overflow: scroll;
+  z-index: 2;
+}
+#home {
+  position: sticky;
+  margin-top: 0px;
+}
+/* ABOUT ETHER CONTAINER */
 #about-ether {
   position: relative;
   padding: 20px;
 }
-/* Style inputs CONTACTS */
+/*  CONTACT CONTAINER  */
+
 input[type=text/contact], select, textarea {
   width: 100%;
   padding: 12px;
@@ -94,7 +130,6 @@ textarea[name=subject] {
 input[type=submit]:hover {
   background-color: #45a049;
 }
-/* Style the container/contact section */
 .contact-container {
   border-radius: 5px;
   background-color: white;
@@ -107,7 +142,6 @@ input[type=submit]:hover {
   margin-top: 6px;
   padding: 20px;
 }
-
 #contact-container {
   box-sizing: border-box;
 }
@@ -117,25 +151,6 @@ input[type=submit]:hover {
   display: table;
   clear: both;
 }
-/* QUOTE/MAIN CONTAINER */
-.main {
-  padding: 0px;
-  margin-top: 0px;
-  height: 600px;
-  overflow: scroll;
-}
-.display{
-  background-color: white;
-  width: 100px;
-  margin-left: 30px;
-  border-color: white;
-  border-style: none;
-  font-size: 18px;
-  border-style: solid;
-  margin-left: 25px;
-  border-radius: 05px;
-  text-align: right;
-}
 #etherimg {
   display: flex;
   position: relative;
@@ -143,38 +158,10 @@ input[type=submit]:hover {
   justify-content: center;
   height: 350px;
 }
-#main-container {
-  /* opacity: 0.5; */
-}
-#quote-container {
-  font-size: 17px;
-  padding: 15px;
-  align-items: center;
-  justify-content: center;
-  overflow: scroll;
-  z-index: 2;
-}
-#refresh {
-margin-left: 30px;
-}
-input[type=number] {
-  border-color: white;
-  border-style: none;
-  font-size: 20px;
-  border-style: solid;
-  margin-left: 25px;
-  border-radius: 05px;
-  text-align: right;
-  width: 150px;
-}
- #amount {
-  width: 100px;
-  margin-left: 30px;
-}
+
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .column, input[type=submit] {
     width: 100%;
     margin-top: 0;
   }
-}

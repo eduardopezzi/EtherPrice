@@ -19,28 +19,33 @@
       <!-- title -->
       <h1 id="page-title" > My Ether Exchange Calculator</h1>
       <!-- links (on the bar)  -->
-      <a href="#home">Home</a>
-      <a href="#about-content">About Eher</a>
-      <a href="#contact-info">Contact</a>
+      <a href="#home" tabindex="4">Home</a>
+      <a href="#about-content" tabindex="5">About Eher</a>
+      <a href="#contact-info" tabindex="6">Contact</a>
     </div>
 
-    <!-- ETHEREUM PRICE BOXES -->
+    <!-- ETHEREUM PRICE CONTAINER -->
     <div id="home" class="main">
       <!-- CALCULATOR -->
-      <div id='main-container' class="columns">
-        <div id="quote-container"  class="column">
-          <p style="color:white; font-size: 14px"> Last refresh:</p> <p id="lastUpdate" style="color:white; font-size: : 'undefined',"></p>
-          <button id="refresh" class="ui button" tabindex="2">Refresh</button> <br><br>
-          <input id="amount" type="text" placeholder="Amount" > <br><br>
-          <div id="eth-quote" class="display"> </div><br><br>
-          <div id="quote-calc" class="display">  </div><br><br>
-
-        </div>
-        <!-- HISTORICO -->
-        <div class="column">
-          <p>BOX 2 - ETHER PRICE HISTORIC</p>
-        </div>
-
+      <div id='main-container'>
+        <!-- <div id="quote-container" > -->
+          <div class="dataupdate">
+            <p> Last refresh:</p>
+            <p id="lastUpdate"></p>
+            <button id="refresh" class="ui button" tabindex="2">Refresh</button> <br>
+          </div>
+            <div class="exchange">
+            <p> USD </p>
+            <input id="amount" type="text" placeholder="Amount" tabindex="1" > <br>
+            <p style="margin-left: 30px"> Dollars that I have!</p><br>
+            <p> ETH </p>
+            <div id="eth-quote" class="display" tabindex="3"> </div>
+            <p style="margin-left: 30px"> Last Ether price! </p><br>
+            <p> ETH </p>
+            <div id="quote-calc" class="display">  </div>
+            <p style="margin-left: 30px"> Ethers I can get! </p> <br>
+          </div>
+        <!-- </div> -->
       </div>
 
   <!-- ETHEREUM CONTENT/ABOUT -->
@@ -50,7 +55,7 @@
     Ethereum is the pioneer for blockchain based smart contracts. When running on the blockchain a smart contract becomes like a self-operating computer program that automatically executes when specific conditions are met. On the blockchain, smart contracts allow for code to be run exactly as programmed without any possibility of downtime, censorship, fraud or third-party interference. It can facilitate the exchange of money, content, property, shares, or anything of value. The Ethereum network went live on July 30th, 2015 with 72 million Ethereum premined.</p>
       <p></p>
     </div>
-    </div>
+  </div>
 
 
 <!-- Contact form  -->
@@ -63,17 +68,14 @@
       </div>
       <div class="row">
         <div class="contact-column">
-          <form action="/action_page.php">
-            <label for="fname">First Name</label>
+          <form action="mailto:eduardopezzi@me.com" method="post" enctype="text/plain" >
+            <label for="fname">First Name</label><br>
             <input type="text/contact" id="fname" name="firstname" placeholder="Your name.."> <br>
-            <label for="lname">Last Name</label>
-            <input type="text/contact" id="lname" name="lastname" placeholder="Your last name.."> <br><br>
-            <label for="country">Country</label>
-            <select id="country" name="country">
-              <option value="canada">Canada</option>
-              <option value="uk">UK</option>
-              <option value="usa">USA</option>
-            </select><br><br>
+            <label for="lname">Last Name</label><br>
+            <input type="text/contact" id="lname" name="lastname" placeholder="Your last name.."> <br>
+            <label for="email">E-mail</label><br>
+            <input type="text/contact" id="email" name="email" placeholder="Your last e-mail"> <br>
+            </select>
             <label for="subject">Subject</label><br>
             <textarea id="subject" name="subject" placeholder="Write something.." style="height:120px"></textarea><br>
             <input type="submit" value="Submit">
